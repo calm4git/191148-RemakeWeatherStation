@@ -269,7 +269,7 @@ void GetSenseboxMapping( void ){
         Mapping_0["SensorID"] = Mapping.SenseBoxSensorID;
         Mapping_0["Enabled"] = (bool)(Mapping.enable);
     }
-
+    //Check if we can jsut send the json stored in flash 
     serializeJson(doc, response);
     server->send(200, "text/plain", response);
 }
